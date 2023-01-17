@@ -54,6 +54,7 @@ class TeamsAdapter : RecyclerView.Adapter<TeamsAdapter.TeamsViewHolder>() {
             tvName.text = teamName
             tvCountry.text = country
             teamIcon.load(currentTeam.logo)
+            // Решил вместо повтороного запроса в активити TeamDetails просто передать данные с первого запроса так как данные одни и те же в апишке
             teamCard.setOnClickListener {
                 val intent = Intent(context, TeamDetails::class.java)
                 intent.putExtra("shortCode", shortCode)
